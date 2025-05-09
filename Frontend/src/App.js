@@ -5,6 +5,12 @@ import Hero from './components/Hero';
 import Destinations from './components/Destinations';
 import Features from './components/Features';
 import Footer from './components/Footer';
+import EventList from './components/EventList';
+import HotelList from './components/HotelList';
+import NotificationList from './components/NotificationList';
+import RecommendationList from './components/RecommendationList';
+import UserList from './components/UserList';
+
 
 function App() {
   return (
@@ -13,6 +19,13 @@ function App() {
       <Hero />
       <Destinations />
       <Features />
+      <Routes> {/* Wrap your Route components here */}
+      <Route path="/events" element={<EventList />} />
+      <Route path="/hotels" element={<HotelList />} />
+      <Route path="/notifications" element={<NotificationList />} />
+      <Route path="/recommendations" element={<RecommendationList />} />
+      <Route path="/users" element={<UserList />} />
+      </Routes>
       <Footer />
     </Router>
   );
